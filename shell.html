@@ -1,0 +1,176 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>
+        Receipt Print
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@200&family=Titillium+Web&family=Roboto+Mono&family=Share+Tech+Mono&family=Space+Mono&family=Victor+Mono:wght@600&family=Lato:wght@400&display=swap"
+          rel="stylesheet">
+    <style>
+        .left-cell {
+            display:inline-block;
+            width:59%;
+            text-align:left;
+        }
+        .right-cell {
+            display:inline-block;
+            width:39.9%;
+            text-align:right;
+        }
+        .shell-logo-img {
+            filter: grayscale(100%);
+            opacity: .2;
+            object-fit: fill;
+            max-height: 100%;
+            width:100%;
+        }
+        .shell-logo-div {
+            left: 160px;
+            position: absolute;
+            height: 80px;
+            width: 170px;
+        }
+        .shell-logo1 {
+            top: -20px;
+        }
+        .shell-logo2 {
+            top: 200px;
+        }
+        .shell-logo3 {
+            top: 420px;
+        }
+        .shell-logo4 {
+            top: 640px;
+        }
+        .shell-logo5 {
+            top: 830px;
+            overflow: hidden;
+        }
+        .star:after {
+        content:"********************************************************************";
+            overflow:hidden;
+            display: block;
+            font-size:12pt;
+            white-space:nowrap;
+        }
+    </style>
+</head>
+<body>
+<div style="height:70px"></div>
+<div class="shell-logo-div shell-logo1">
+    <img src="static/shell-logo.png" alt="shell Logo 1" class="shell-logo-img">
+</div>
+<div class="shell-logo-div shell-logo2">
+    <img src="static/shell-logo.png" alt="shell Logo 2" class="shell-logo-img">
+</div>
+<div class="shell-logo-div shell-logo3">
+    <img src="static/shell-logo.png" alt="shell Logo 3" class="shell-logo-img">
+</div>
+<div class="shell-logo-div shell-logo4">
+    <img src="static/shell-logo.png" alt="shell Logo 4" class="shell-logo-img">
+</div>
+<div class="shell-logo-div shell-logo5">
+    <img src="static/shell-logo.png" alt="shell Logo 5" class="shell-logo-img" style="margin-top: 50px;">
+</div>
+<table id="table1" cellspacing="1" cellpadding="1"
+       style="font-size:12pt; table-layout: fixed; width:454px; height: 100px; font-weight:bold; font-family:Space Mono">
+    <tbody>
+    <tr>
+        <td class="star"></td>
+    </tr>
+    <tr>
+        <td>SOHAM ENTERPRISE-AERODROME RD</td>
+    </tr>
+    <tr>
+        <td>REVENUE SURVEY NO. 118</td>
+    </tr>
+    <tr>
+        <td>PLOT NO.29 + 32, CITY SURVEY NO. 5900</td>
+    </tr>
+    <tr>
+        <td>AERODROME ROAD, JAMNAGAR - 361006</td>
+    </tr>
+    <tr>
+        <td>GST: 24AGDPT1607P1Z5 VAT:24100203053</td>
+    </tr>
+    <tr>
+        <td>SITE ID: 12811717</td>
+    </tr>
+    <tr>
+        <td class="star"></td>
+    </tr>
+    <tr>
+        <td class="left-cell">{{date}} {{time}} POS: {{ '{:0}'.format(range(1, 4) | random) }}</td>
+        <td class="right-cell"><span style="font-family: Titillium Web">#</span><span>{{inv}}</span></td>
+    </tr>
+    <tr align="left">
+        <td><br></td>
+    </tr>
+    <tr>
+        <td>&nbsp;&nbsp; 04 - Unleaded</td>
+    </tr>
+    <tr>
+        <td class="left-cell">&nbsp;&nbsp;&nbsp;&nbsp; {{qty}}L x {{rate}}Rs/L</td>
+        <td class="right-cell">Rs {{amount}}</td>
+    </tr>
+    <tr align="left">
+        <td><br></td>
+    </tr>
+    <tr>
+    <tr>
+        <td class="left-cell">Sale Total</td>
+        <td class="right-cell">Rs {{amount}}</td>
+    </tr>
+    <tr>
+        <td class="left-cell">Cash</td>
+        <td class="right-cell">Rs {{amount}}</td>
+    </tr>
+    <tr align="left">
+        <td><br></td>
+    </tr>
+    <tr>
+        <td class="left-cell">TOTAL INVOICE</td>
+        <td class="right-cell">Rs {{amount}}</td>
+    </tr>
+    <tr align="left">
+        <td><br></td>
+    </tr>
+    <tr>
+        <td>{{name}}</td>
+    </tr>
+    <tr>
+        <td>Vehicle Registered: {{vehicle_no}}</td>
+    </tr>
+    <tr align="left">
+        <td><br></td>
+    </tr>
+    <tr>
+        <td>Shell Go+</td>
+    </tr>
+    <tr>
+        <td>Customer ID: +918*****2409</td>
+    </tr>
+    <tr align="left">
+        <td><br></td>
+    </tr>
+    <tr>
+        <td>Visit www.shell.in/offers to view latest offers</td>
+    </tr>
+    <tr>
+        <td class="star"></td>
+    </tr>
+    <tr>
+        <td align="center">THANK YOU FOR VISITING SHELL</td>
+    </tr>
+    <tr>
+        <td align="center">TELL US ABOUT YOUR VISIT AT</td>
+    </tr>
+    <tr>
+        <td align="center">www.shell.com/india/tellshell</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

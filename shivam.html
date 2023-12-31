@@ -1,0 +1,163 @@
+{# jio-bp.html #}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>
+        Receipt Print
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Montserrat&family=Mukta&family=Press+Start+2P&family=Roboto&family=Roboto+Mono&family=Source+Code+Pro:wght@500&family=Victor+Mono:wght@600&display=swap"
+          rel="stylesheet">
+    <style>
+    .sidelogo1 {
+        transform: rotate(270deg);
+        left: 250px;
+        width: 20%;
+        position: absolute;
+        filter: grayscale(100%);
+        opacity: .35;
+        top: 200px;
+        display: flex;
+    }
+    .sidelogo2 {
+        transform: rotate(270deg);
+        left: 250px;
+        width: 20%;
+        position: absolute;
+        filter: grayscale(100%);
+        opacity: .35;
+        top: 670px;
+        display: flex;
+    }
+    .invoice{
+        margin-top:10px;
+        margin-left:20px;
+        font-size:11pt;
+        width:300px;
+        border-style:solid;
+        border-width:1px;
+        border-color:Black;
+        font-family: 'Victor Mono', monospace;
+    }
+
+    </style>
+<body>
+<img src="https://bill-generator-assets.s3.ap-south-1.amazonaws.com/side-logo.png" alt="Bank Logo" class="sidelogo1">
+<img src="https://bill-generator-assets.s3.ap-south-1.amazonaws.com/side-logo.png" alt="Bank Logo" class="sidelogo2">
+<table class="invoice" cellspacing="1" cellpadding="1">
+    <tbody>
+    <tr align="center">
+        <td><img src="./static/indian-oil-logo.png" style="height:180px;"></td>
+    </tr>
+    <tr>
+        <td align="center" style="font-size:24px;">Welcomes You</td>
+    </tr>
+    <tr>
+        <td>SHIVAM PETROLEUM</td>
+    </tr>
+    <tr>
+        <td>SARU SECTION ROAD</td>
+    </tr>
+    <tr>
+        <td>JAMNAGAR 361006</td>
+    </tr>
+    <tr>
+        <td>Tel. No.: 0288 2711951</td>
+    </tr>
+    <tr align="left">
+        <td><br></td>
+    </tr>
+    <tr>
+        <td>Receipt No.: {{inv}}</td>
+    </tr>
+    <tr>
+        <td>FCC ID: 306569543</td>
+    </tr>
+    <tr>
+        <td>FIP No.: 02</td>
+    </tr>
+    <tr>
+        <td>Nozzle No: {{nozzle}}</td>
+    </tr>
+    <tr align="left">
+        <td>Product: Petrol</td>
+    </tr>
+    <tr align="left">
+        <td><br/></td>
+    </tr>
+
+    <tr align="left">
+        <td>Preset Type: Amount</td>
+    </tr>
+    <tr align="left">
+        <td>Rate: {{rate}}</td>
+    </tr>
+    <tr align="left">
+        <td>Volume: {{volume}}</td>
+    </tr>
+    <tr align="left">
+        <td>Amount: {{amount}}</td>
+    </tr>
+    <tr align="left">
+        <td>Atot: 00026920942.23</td>
+    </tr>
+    <tr align="left">
+        <td>Vtot: 0000279780.390</td>
+    </tr>
+
+    <tr align="left">
+        <td><br/></td>
+    </tr>
+
+    <tr align="left">
+        <td>Vehicle No: {{vehicle_no}}</td>
+    </tr>
+
+    <tr align="left">
+        <td>Mobile No: Not Entered</td>
+    </tr>
+
+    <tr align="left">
+        <td><br/></td>
+    </tr>
+
+    <tr align="left">
+        <td>Date: {{date}}</td>
+    </tr>
+
+    <tr align="left">
+        <td>Time: {{time}}</td>
+    </tr>
+
+    <tr align="left">
+        <td><br/></td>
+    </tr>
+
+    <tr align="left">
+        <td>CST No: TIN 24100500467</td>
+    </tr>
+
+    <tr align="left">
+        <td>LST No: R.S.L.NO.R353/03</td>
+    </tr>
+
+    <tr align="left">
+        <td>VAT No:</td>
+    </tr>
+
+    <tr align="left">
+        <td>ATTENDANT ID: Not Available</td>
+    </tr>
+
+    <tr align="left">
+        <td>FCC DATE: Not Available</td>
+    </tr>
+
+    <tr align="left">
+        <td>FCC TIME: Not Available</td>
+    </tr>
+</table>
+</body>
+</html>
