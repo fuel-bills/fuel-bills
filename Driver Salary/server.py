@@ -1,14 +1,14 @@
-import requests
 from flask import Flask, request
 from jinja2 import Template
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='/static', static_folder='static')
 
 
 @app.route("/")
 def index():
-    template = Template(requests.get('https://fuel-bills.github.io/Driver%20Salary/index.html#/').text)
-    return template.render(request.args)
+    with open('index.html') as f:
+        template = Template(f.read())
+        return template.render(request.args)
 
 
 if __name__ == '__main__':
